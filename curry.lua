@@ -17,11 +17,11 @@ function curry(func, params)
     end)
 end
 
+print( "Testing" )
+
 add = curry(function (a, b, c)    
   return a + b + c
 end)
-
-print( "Testing" )
 
 assert( add(1)(2)(3) == 6 )
 
@@ -29,9 +29,9 @@ assert( add(1)(1)(1) == 3 )
 
 local add2 = add(0)(2)
 
-assert( add2(3) == 5 ) -- 5
+assert( add2(3) == 5 )
 
-assert( add2(4) == 6 ) -- 3
+assert( add2(4) == 6 )
 
 sum = curry(function(a, group)
     for _,v in ipairs(group) do
